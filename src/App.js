@@ -10,6 +10,7 @@ function App() {
     setResult(
       phrase
         .toUpperCase()
+        .trim()
         .split(" ")
         .join("👏")
     );
