@@ -25,7 +25,10 @@ exports.handler = function(event, context, callback) {
 
   const response = {
     statusCode: 200,
-    body: JSON.stringify({ response_type: "in_channel", text: result }),
+    body: JSON.stringify({
+      response_type: "in_channel",
+      text: `:${emojiName}:${result}:${emojiName}:`
+    }),
     headers: {
       "content-type": "application/json"
     }
